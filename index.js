@@ -11,9 +11,6 @@ app.get('/', (req, res) => {
   res.render('index', {haikus: haikus});
 });
 
-app.use((req, res, next) => {
-  res.status(400).render('400', { error: '400 - Bad Request' });
-});
 
 app.use((req, res, next) => {
   res.status(404).render('404', { error: '404 - Not Found' });
